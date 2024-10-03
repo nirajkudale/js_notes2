@@ -99,3 +99,53 @@ values.email="smkumar@google.com"
 
  console.log(values);
 
+//next
+
+const mykey=Symbol("key1");
+
+ const score={
+   name:"omkar",
+   age:22,
+   collage_name:"om sai infotek",
+   [mykey]:"phone",
+   update_state:['monday','tusday'],
+   login_state:true
+
+}
+
+
+// console.log(score);
+
+
+
+const obj1={1:'aa',2:'bb'}
+const obj2={1:'aa',2:'bb'}
+
+const obj3={...obj1,...obj2}
+
+// console.log(obj3);
+
+
+
+const timber=[
+  {
+    id:2,
+    name:"aa"
+  },
+  {
+    id:2,
+    name:"aa"
+  },
+  {
+    id:2,
+    name:"aa"
+  },
+  {
+    id:2,
+    name:"aa"
+  }
+]
+
+
+console.log(Object.values(timber));
+
