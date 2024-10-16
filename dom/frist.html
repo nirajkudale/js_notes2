@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <p>hello</p>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const paren=document.querySelector('.parent')
+    // console.log(paren);
+    //  console.log(paren.children[1].innerHTML);
+    
+    // for (let i = 0; i < paren.children.length; i++) {
+    //     console.log(paren.children[i].innerHTML);
+        
+        
+    // }
+
+
+    paren.children[1].style.color="orange"
+
+        paren.children[3].style.color="red"
+
+
+        for (let i = 0; i < paren.children.length; i++) {
+            /*innerhtml show the value of class*/
+            console.log(paren.children[i].innerHTML);
+            
+            
+        }
+
+
+
+        
+
+
+</script>
+</html>
