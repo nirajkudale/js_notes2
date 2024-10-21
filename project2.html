@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+
+            max-width: 400px;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid wheat;
+            border-radius: 5px;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 3px;
+            border: 1px solid wheat;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <h2> sample project</h2>
+
+    <form id="myform">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="enter name">
+
+        <label for="email">Email_id:</label>
+        <input type="email" id="email" name="email" placeholder="enter email_id">
+
+        <label for="dob">date_of_birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" placeholder="enter password">
+
+        <button type="submit">submit</button>
+        <!-- <button type="reset">reset</button> -->
+    </form>
+</body>
+<script>
+    document.getElementById('myform').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+       
+      let hasError = false;
+
+
+        const name = document.getElementById('name').value;
+        if (name.trim() === '') {
+            document.getElementById('name').innerText = 'name is required';
+            hasError = true;
+        }
+
+        const email = document.getElementById('email').value;
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (email.trim() === '' || !emailPattern.test(email)) {
+        document.getElementById('email').innerText = 'Enter a valid email';
+        hasError = true;
+      }
+
+      const password = document.getElementById('password').value;
+      if (password.trim().length < 6) {
+        document.getElementById('password').innerText = 'Password must be at least 6 characters long';
+        hasError = true;
+      }
+     
+      const dateof=document.getElementById('dob').value;
+
+        if(!hasError){
+            alert('form submitted');
+            console.log('name:',name);
+            console.log('email:',email);
+            console.log('dob:', dateof);
+            console.log('password:',password);
+            
+            
+            document.getElementById('myform').reset();
+        }
+    });
+
+</script>
+
+</html>
