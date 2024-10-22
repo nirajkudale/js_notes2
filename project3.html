@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px;
+            border-radius: 10px;
+            min-width: 50px;  
+             max-width: 300px;
+
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        #gray {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body class="canva">
+    <button id="red" class="buttons">1</button>
+    <button id="green" class="buttons">2</button>
+    <button id="yellow" class="buttons">3</button>
+    <button id="gray" class="buttons">4</button>
+</body>
+<script>
+   const buttons=document.querySelectorAll('.buttons')
+
+    const body=document.querySelector("body")
+
+
+    buttons.forEach(function(button){
+        
+        button.addEventListener('click',function(event){
+            if(event.target.id === 'red'){
+                body.style.backgroundColor=event.target.id;
+            }
+            if(event.target.id === 'green'){
+                body.style.backgroundColor=event.target.id;
+            }
+            if(event.target.id === 'yellow'){
+                body.style.backgroundColor=event.target.id;
+            }
+            if(event.target.id === 'gray'){
+                body.style.backgroundColor=event.target.id;
+            }
+            
+        })
+    })
+
+
+
+</script>
+
+</html>
