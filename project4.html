@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            align-content: center;
+            margin: 50px;
+            padding: 20px;
+        }
+
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label class="s">enter hight cm:</label>
+        <input type="text" id="num1"> <br>
+        <label class="s">enter weight kg:</label>
+        <input type="text" id="num2">
+        <br>
+        <button>
+            calculate
+        </button>
+
+        <div id="number"></div>
+    </form>
+
+</body>
+
+<script>
+
+
+
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const num1 = parseFloat(document.querySelector('#num1').value);
+        const num2 = parseFloat(document.querySelector('#num2').value);
+
+        const Number = document.querySelector('#number');
+
+        if (num1 <= 0 || isNaN(num1)) {
+            Number.innerHTML = `please enter valid number ${num1}`
+        }
+        else if (num2 <= 0 || isNaN(num2)) {
+            Number.innerHTML = `please enter valid number ${num2}`
+        }
+        else {
+            const bm = (num2 / ((num1 * num1) / 10000)).toFixed(2);
+            //show result
+            Number.innerHTML = `<span>${bm}</span>`
+        }
+
+    });
+
+
+
+
+
+</script>
+
+</html>
