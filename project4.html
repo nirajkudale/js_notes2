@@ -57,6 +57,19 @@
             const bm = (num2 / ((num1 * num1) / 10000)).toFixed(2);
             //show result
             Number.innerHTML = `<span>${bm}</span>`
+            
+             if (bm<50) {
+                les.innerHTML=`under weight :${bm}`
+            }
+            else if(bm==50){
+                nor.innerHTML=`normal weight:${bm}`
+            }
+            else if (bm > 50){
+                ove.innerHTML=`over weight: ${bm}`
+            }
+            else{
+               
+            }
         }
 
     });
