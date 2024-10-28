@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(39, 39, 39);
+        }
+
+        #te {
+            text-align: center;
+            color: antiquewhite;
+            padding-top: 10%;
+            
+        }
+        #num{
+            margin-top: 10px;
+            margin-left: 45%;
+        }
+        #sub{
+            margin-top: 10px;
+            margin-left: 48%;
+        }
+        #resultpas{
+            margin-left: 45%;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div id="te">guess number</div>
+        <input type="text" id="num"><br>
+        <input type="submit" id="sub" value="submit guess">
+        
+    </form>
+    <div id="resultpas">
+        <p>preves guess:<span id="pregu" ></span></p><br>
+        <p>remaning guess:<span id="regu" >10</span></p>
+        <p><span id="loworhi"></span></p>
+    </div>
+</body>
+<script>
+    const rendomnum=parseInt(Math.random()*100 +1)
+
+    const text = document.querySelector('#text');
+    const sub=document.querySelector('#sub');
+    const pregu=document.querySelector('#pregu');
+    const regu=document.querySelector('#regu');
+    const loworhi=document.querySelector('#loworhi');
+    const resultpas=document.querySelector('#resultpas');
+
+    const p =document.createElement('p');
+
+    let prevgess=[];
+    let numguess=1;
+
+    function validteguess(params) {
+        
+    }
+
+    function checkguess(params) {
+        
+
+    }
+    
+    function displayguess(params) {
+        
+    }
+
+    function displaymasseges(params) {
+        
+    }
+
+    function endgame(params) {
+        
+    }
+
+    function newgame(params) {
+        
+    }
+
+
+</script>
+
+</html>
