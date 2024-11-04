@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello word</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const prinname=function() {
+        console.log("niraj");
+        
+    }
+
+    const channame=function(){
+        document.querySelector('h1').innerHTML='my name niraj'
+    }
+
+    const changeme=setTimeout(channame,2000)
+
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeme)
+        console.log("stop!");
+        
+    })
+        
+   
+</script>
+</html>
